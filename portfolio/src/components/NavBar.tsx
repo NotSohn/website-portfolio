@@ -1,10 +1,20 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link, useLocation} from "react-router-dom";
+import "../styles/NavBar.css";
+import MenuIcon from '@mui/icons-material/Menu';
+
 function NavBar(){
+    const [ExpandNavBar,setExpandNavBar] = useState(false);
+    const location = useLocation();
+    useEffect(() =>{
+        setExpandNavBar(false);
+    },[location]);
     return(
-        <div className ="navbar">
+        <div className ="navbar" id={ExpandNavBar ? "open" : "close"}>
             <div className ="toggleButton">
-                <button></button>
+                <button onClick = {() => {setExpandNavBar((prev) => !prev)}}> 
+                    <MenuIcon/>
+                </button>
             </div>
             <div className ="links">
                 <Link to="/"> Home </Link>
