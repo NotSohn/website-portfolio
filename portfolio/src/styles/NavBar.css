@@ -12,12 +12,14 @@
     justify-content: center;
     color: #fafafa;
 }
-
 .navbar a{
     color: #fafafa;
     text-decoration: none;
-    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
     font-size: 25px;
+    display:flex;
 
 }
 
@@ -43,9 +45,10 @@
 }
 #open .links{
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 100px;
-}
+    justify-content: center;
+    position:relative;
+    margin-bottom: 100%;
+} 
 #open a{
     width: 100%;
     text-align: center;
