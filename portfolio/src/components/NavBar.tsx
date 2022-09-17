@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
-import "../styles/NavBar.css";
+import "../styles/RouteStyle/NavBar.css";
 import MenuIcon from '@mui/icons-material/Menu';
 
 function NavBar(){
