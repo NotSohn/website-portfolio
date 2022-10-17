@@ -1,34 +1,23 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useLocation} from 'react-router-dom';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+
+import "./App.css";
 import NavBar from "./components/NavBar";
 import "./styles/RouteStyle/NavBar.css";
 import Footer from "./components/Footer";
-import Experiences from './styles/routelayout/Experience';
-import Home from './styles/routelayout/Home';
-import Projects from './styles/routelayout/Projects';
-import {AnimatePresence} from 'framer-motion';
+import Experiences from "./components/pagelayout/Experience";
+import Home from "./components/pagelayout/Home";
+import Projects from "./components/pagelayout/Projects";
+import Contacts from "./components/pagelayout/Contacts";
+import AnimatedRoutes from "./styles/RouteStyle/AnimatedRoutes";
 
 function App() {
- /* const location = useLocation();*/
   return (
-    <div className= "App">
+    <div className="App">
       <BrowserRouter>
-        <NavBar/>
-        <div>
-        <AnimatePresence exitBeforeEnter>
-          <Routes>
-            <Route path ="/" element ={<Home />} />
-            <Route path ="/projects" element ={<Projects />} />
-            <Route path ="/experience" element ={<Experiences />} />
-          </Routes>
-        </AnimatePresence>
-        </div>
-        <Footer/>
+        <NavBar />
+        <AnimatedRoutes />
+        <Footer />
       </BrowserRouter>
     </div>
   );
